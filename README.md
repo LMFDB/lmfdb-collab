@@ -2,7 +2,7 @@ LMFDB Collaboration
 ===================
 
 This hosts the [Wiki](https://github.com/LMFDB/lmfdb-collab/wiki)
-and the [website](https:// ... )
+and the [website](http://LMFDB.github.com/lmfdb-collab/)
 for collaborations around the LMFDB.
 
 License
