@@ -1,0 +1,89 @@
+Notes from LMFDB planning session at the Warwick workshop, 6 June 2014
+(copied from the blackboard after discussion led by David Farmer and
+John Cremona):
+
+* Small group meeting to improve the code / testing / standards /
+  data-mirroring, with follow-up
+
+* Recruit more Haralds
+
+* Better
+
+  - documentation
+
+  - communication
+
+  - issue tracking
+
+  - code review
+
+  - records of activity and decisions via the github repositories
+    which exist (as well as lmfdb/lmfdb there are lmfdb/lmfdb-data and
+    lmfdb/lmfdb-collab, each with issue tracking and wiki pages)
+
+* Seek funding for
+
+  - paying technical people
+
+  - more workshops
+
+* Encourage research papers relating to LMFDB work
+
+  - topic for a dedicated workshop?
+
+  - announce planned papers to the group
+
+  - write a paper on the LMFDB project itself (for ANTS 2016?)
+
+  - give better credit for research which goes into the LMFDB and
+    elsewhere (e.g. details of algorithms or results stimulated by the
+    LMFDB)
+
+* Workshop and small group meetings.  Proposals are encouraged for
+  small focussed working groups to meet (away from usual
+  distractions), perhaps right before a workshop so that feedback on
+  new work can be obtained quickly.  Suggested topics for larger
+  workshops are also welcome.  In 2015 there will be a workshop in the
+  first half, perhaps in April, perhaps at AIM.  During September -
+  December there will be many LMFDB-related activities at the ICERM
+  semester including the three workshops there.
+
+  - writing LMFDB-related research papers
+
+  - algebraic modular forms (on compact groups)
+
+  - Hecke characters (small group - Andy Booker)
+
+  - genus 2 curves and abelian surfaces (small group - Haluk Sengun)
+
+  - weight 1 modular forms (small group)
+
+  - subgroups of SL(2,Z), Belyi maps and modular curves -- bring in
+    new people (Pauli, Cunningham)
+
+  - Galois representations (a topic for Trieste, September 2014)
+
+  - Groups as a main heading in the LMFDB menu, including
+    algebraicgroups -- but do not try to be too ambitions and include
+    everything!
+
+  - Second level main pages for topics to include
+
+    # data referenced in a paper
+
+    # permanent URL
+
+    # low threshold for adding new data
+
+* Add your name to the contributors list (edit the CONTRUBUTORS.yaml
+  file and issue a pull request).
+
+* Cite the LMFDB and acknowledge support (funding) through workshop
+  attendance and use of machines bought with grants, for use in
+  regular reports to current funding agency and in future funding
+  applications.  John Cremona to send a link to the Google form set up
+  by Mike Rubinstein to make collection of data on preprints and
+  papers very easy.
+
+
+

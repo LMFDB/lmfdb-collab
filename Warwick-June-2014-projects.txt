@@ -1,0 +1,150 @@
+Project working groups at the June 2014 Warwick LMFDB workshop
+
+High Precision Computations
+
+- Pascal Molin
+- Mike Rubinstein
+- Patrick Kuehn
+- Jonathan Bober
+- Andy Booker
+
+Database of Zeroes
+
+- Patrick Kuehn
+- Andy Booker
+- Pascal Molin
+- Jonathan Bober
+
+Cohomology of arithmetic groups
+
+- Mark McConnell
+- Angelos Koutsianas
+- John Voight
+- Samir Siksek
+
+Half-integral weight modular forms
+
+- Samuele Anni
+
+Subgroups of $\SL_2(\Z)$
+
+- Fredrik Stromberg
+- John Voight
+
+Weight 1 modular forms and number fields
+
+- John Jones
+- John Voight
+- Andy Booker
+- Stephan Ehlen
+
+Elliptic Modular Forms
+
+- Fredrik StrombergS
+- Alejandro Argaez
+- Angelos Koutsianas
+- Nicolas Mascot
+- Stephan Ehlen
+- Sebastian Opitz
+
+Rankin-Selberg
+
+- Chris Wuthrich
+- Mark Watkins
+- Martin Dickson
+
+Hecke characters
+
+- Andy Booker
+- Pascal Molin
+
+Jacobi Motives
+
+- David Roberts
+- John Jones
+
+Number Fields
+
+- John Jones
+- John Voight
+- Alejandro Argaez
+- Angelos Koutsianas
+- David Roberts
+
+Function Fields
+
+- Brian Conrey
+- Alina Bucur
+- Kiran Kedlaya
+- Mike Rubinstein
+
+Elliptic Curves over Number Fields
+(See also $\Q$-curves)
+
+- John Cremona
+- Dan Yasaki
+- John Voight
+- Nicolas Mascot
+- Maarten Derickx
+- Haluk Sengun
+- Alejandro Argaez
+- Angelos Koutsianas
+- Samuele Anni
+- Warren Moore
+- Marc Masdeu
+
+Home page refit
+
+- David Farmer
+- Alina Bucur
+- Samuele Anni
+- Mike Rubinstein
+- Patrick Kuehn
+- Sally Koutsoliotas
+
+Bianchi modular forms
+
+- Haluk Sengun
+- John Cremona
+- Dan Yasaki
+- Aurel Page
+- John Voight
+
+L-function browsing
+
+- David Farmer
+- Patrick Kuehn
+- Sally Koutsoliotas
+- Mike Rubinstein
+
+Hyperelliptic $\zeta$-functions over $\F_q$
+
+- Mike Rubinstein
+- Kiran Kedlaya
+- Alina Bucur
+- John Voight
+
+Deformation of zeroes of Selberg zeta function
+
+- Markus Fraczek
+
+Abelian surfaces of $\GL_2$_type over number fields
+
+- Haluk Sengun
+- John Voight
+- Aurel Page
+- Marc Masdeu
+
+$\Q$-curves
+
+- Marc Masdeu
+- Kiran Kedlaya
+- Samuele Anni
+- Jeroen Sijsling
+
+Genus 2 curves
+
+- Andrew Sutherland
+- Kiran Kedlaya
+- Jeroen Sijsling
+- Andy Booker
