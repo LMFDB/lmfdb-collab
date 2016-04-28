@@ -1,0 +1,131 @@
+Proposed workflow for git branches and revision from May 2016
+=============================================================
+
+From May 2016 the first non-beta release of LMFDB 1.0 will operate at
+www.lmfdb.org, and the requires a more formalized approach to branches
+and release management.  Here is a proposal for a workable scheme
+which makes as few changes as possible to the normal workflow of most
+LMFDB developers.
+
+Definitions
+===========
+
+1. Git repositories
+
+   - upstream means github/LMFDB
+   - lmfdb means the repository of code with which the main and beta
+      websites operate
+   - origin means an individual developers clone of upstream
+
+2. Branches
+
+   - prod is the branch running at www.lmfdb.org
+   - beta is the branch running at beta.lmfdb.org
+   - master is the current development branch
+
+   We always have master >= beta >= prod where ">=" means "contains
+   all commits in, possible more"
+
+   A more standard set of names for the would be master, beta,
+   development (respectively) but to keep things simple I do not
+   propose changing the branch names now.
+
+   Both upstream and lmfdb contain these branches (though lmfdb does
+   not need master except for testing); origin may or may not contain
+   branches other than master.
+
+   Pushing to lmfdb/prod (respectively lmfdb/beta) cause the relevant
+   server to restart using the new code.  Facilities are available on
+   the server to test that this will work before doing it for real.
+
+3. Release managers
+
+   I will call a "release manager" anyone who has write permissions to
+   the upstream and lmfdb repositories.  In practice, recently, the
+   people who have such access and have used it are John Cremona,
+   David Farmer, David Jones; previously both Jonathan Bober and
+   Harald Schilly have done this too.  The set of people who do this
+   will change over time.
+
+4. Release names
+
+   We not yet used release names or numbers but now we should.  This
+   (and everything here) applies to the code, not the data.
+
+   A release name will have the form a.b or a.b.c where a, b, c are
+   non-negative integers (a=major release number >=1, b=minor release
+   number >=0, c = revision number>=0).  The first release will be
+   1.0.  Bug-fix releases (see below) increment the revision number
+   only, so a.b -> a.b.1 or a.b.c -> a.b.(c+1).  Normal releases
+   increment the minor number, so a.b -> a.(b+1) or a.b.c -> a.(b+1).
+   Less frequent major releases increment the major release number, so
+   a.b -> (a+1).0 or a.b.c -> (a+1).0.
+
+   New release names are only created when the prod branch is
+   advanced.  The name is attached to a particular commit using "git
+   tag".
+
+   The webserver should display the current release (on www.lmfdb.org)
+   or "beta" (on beta.lmfdb.org).  It would be good if the code
+   running could determine what its release was; one way would be to
+   have a new file in the lmfdb root directory containing the current
+   release number, which would be updated at the same time as a new
+   tag is created.  Then the version displayed on beta could be
+   inc_rev(rev)+'beta' where rev is the current revision (a.b or
+   a.b.c) and inc_rev is a function which increments b.
+
+Workflow
+========
+
+   Normal development:
+
+   Most development work will, as now, result in a pull request from a
+   developer's branch on (their) origin to upstream/master.  After
+   review and subsequent revision if necessary, a release manager can
+   merge the pull request into master.  Then normally they will also
+   push to upstream/beta and lmfdb/beta.  One exception might be at a
+   workshop when a lot of merges to master are made in quick
+   succession; then pushing to beta might only happen once a day, or
+   at the end of the week.
+
+   Critical bug-fixes:
+
+   If a critical bug is detected at www.lmfdb.org we will want to fix
+   it on the prod branch without waiting for the next release.  What
+   is a "critical bug" here will be judged by the release managers and
+   the Issue tagged as such.  To fix such a bug, a developer must base
+   new commits onto the current upstream/prod branch (by making a
+   local clone) and *not* the master branch.  When done and tested
+   (being sure to test in non-beta mode) the branch can then be pushed
+   to origin/bugfix (using a branch name which refers to the
+   associated Issue is probably best), and a pull request made to
+   upstream/prod (*not* upstream/master is is usual).  After review
+   and testing the release manager will
+
+   - merge onto upstream/prod
+
+   - push to lmfdb/prod (putting the fix into effect on the www server)
+
+   - merge onto upstream/master (so that master has the fix too); this
+     might require resolving merge conflicts.  I think this step can
+     be done on github using a pull request; otherwise the release
+     manager could do it locally (git checkout master; git pull
+     upstream master; git merge prod; git push upstream master).
+
+   - push to upstream/beta and lmfdb/beta
+
+   Releases:
+
+   A new release consists of
+
+   - merging the current beta into upstream/prod
+   - adding a tag with the new release number
+   - pushing to lmfdb/prod
+
+   This will happen after consensus is reached among developers.  I
+   would not expect there to be new minor releases (other then bugfix
+   releases) more than once a month, and often the interval would be
+   greater.  Major releases, where the first release number is
+   incremented, would be (obviously) less frequent, maybe once a year,
+   to mark some major new functionality or a new section of the
+   database/website coming out of beta.
